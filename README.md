@@ -16,6 +16,6 @@
   - Payment Failure (**Payments Service**) -  Payment services puts message in `PaymentFaliure` MessageQ including reason, notifies customer via Front-end Service and inserts row in DB. 
   - **Meter Vending Service** - read messages from `PaymentSuccess` MessageQ and hit the 3rd Party Service to provide Vending
   - Vending Success (**Meter Vending Service**) - **Front-end Service** recieves message to notify customer of successful credit added, row inserted into DB
-  - Vending Failure (**Meter Vending Service**) - **Front-end Service** recieves message to notify customer of attempting to add credit, **Meter Vending Service** retries 3rd Party Service to provide Vending, until Max attempts reached when: Customer is alerted, on call operators are alerted, and message is inserted into the `VendingSuccess` MessageQ
+  - Vending Failure (**Meter Vending Service**) - **Front-end Service** recieves message to notify customer of attempting to add credit, **Meter Vending Service** retries 3rd Party Service to provide Vending, until Max attempts reached when: **Front-end Service** recieves notification and the Customer is alerted, on call operators are alerted, and message is inserted into the `VendingFailure` MessageQ
   
 
