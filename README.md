@@ -11,8 +11,11 @@
 
 ### Flow
   - Customer hits **Front-end Service** - where payment can be made and Rcurrent vending service is shown if applicable (ie payment added)
-  - Payment Attempted (**Payments Servive**) - Front-end Service calls Payments service
-  - Payment Success (**Payments Servive**) - Payment services puts message in `PaymentSuccess` MessageQ and inserts row in DB record, notifies customer that it is now attempting to update meter.
-  - Payment Failure (**Payments Servive**) -  Payment services puts message in `PaymentFaliure` MessageQ including reason, notifies customer via Front-end Service and inserts row in DB record. 
+  - Payment Attempted (**Payments Service**) - Front-end Service calls Payments service
+  - Payment Success (**Payments Service**) - Payment services puts message in `PaymentSuccess` MessageQ, inserts row in DB, notifies customer that it is now attempting to update meter.
+  - Payment Failure (**Payments Service**) -  Payment services puts message in `PaymentFaliure` MessageQ including reason, notifies customer via Front-end Service and inserts row in DB. 
+  - **Meter Vending Service** - read messages from `PaymentSuccess` MessageQ and hit the 3rd Party Service to provide Vending
+  - Vending Success (**Meter Vending Service**) - **Front-end Service** recieves message to notify customer of successful credit added, row inserted into DB
+  - Vending Failure (**Meter Vending Service**) - **Front-end Service** recieves message to notify customer of attempting to add credit, **Meter Vending Service** retries 3rd Party Service to provide Vending, until Max attempts reached when: Customer is alerted, on call operators are alerted, and message is inserted into the `VendingSuccess` MessageQ
   
 
