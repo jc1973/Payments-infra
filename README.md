@@ -24,3 +24,14 @@
 
 
 ![AWS Infrastructure](Utilita-AWS-Solution-ECR.svg 'AWS Infrastructure')
+
+  - The only Publicly accessible service is the **Front-end Application Load Balance**, and this only applies in the Production environment.
+  - The payments service and the Meter Vending service can share 1 application load balancer.
+  - All console and programmatic access and changes is logged to Cloudtrail.
+  - CloudWatch is used for monitoring and alerting (via SNS)
+  - Events from ECS, SQS are sent to CloudWatch
+
+
+
+
+**Note: In the Non Production environments no services are publicaly avaliable.**
