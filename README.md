@@ -18,4 +18,9 @@
   - Vending Success (**Meter Vending Service**) - **Front-end Service** recieves message to notify customer of successful credit added, row inserted into DB
   - Vending Failure (**Meter Vending Service**) - **Front-end Service** recieves message to notify customer of attempting to add credit, **Meter Vending Service** retries 3rd Party Service to provide Vending, until Max attempts reached when: **Front-end Service** recieves notification and the Customer is alerted, on call operators are alerted, and message is inserted into the `VendingFailure` MessageQ
   
+  
+  
+## Cloud Infrastructure
 
+
+![AWS Infrastructure](Utilita-AWS-Solution-ECR.svg 'AWS Infrastructure')
