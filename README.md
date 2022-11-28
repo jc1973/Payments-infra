@@ -35,3 +35,13 @@
 
 
 **Note: In the Non Production environments no services are publicaly avaliable.**
+
+
+## CI / CD
+
+
+![CICD-Dev-Container-SVC.svg]
+![CICD-Dev-Infrastructure.svg]
+![CICD-Staging-Environment.svg]
+![CICD-Non-Live-Prodution-Environment.svg]
+![CICD-Production-Enviroment-Update.svg]
