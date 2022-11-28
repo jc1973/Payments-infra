@@ -41,10 +41,19 @@
 
 ## CI / CD
 
-
+### Development
+  
 ![CI Service Container](CICD-Dev-Container-SVC.svg 'Continous Integration - Service container Builds')
 **Note: [Synk](https://snyk.io) or similar will scan code repositories for vunerabilities, security issues and code quality.**
 ![CICD Dev Enviroment](CICD-Dev-Infrastructure.svg 'Continuous Integration and Deployment Development Environment')
+  
+
+### Staging
+  
 ![CICD Staging Environment](CICD-Staging-Environment.svg 'Continuous Integration and Deployment Staging Environment')
-![CICD Non-Live Prodution Environment](CICD-Non-Live-Prodution-Environment.svg 'Continuous Integration and Deployment Non-Live Production Environment')
+  
+
+### Production
+  
+![CICD Non-Live Production Environment](CICD-Non-Live-Prodution-Environment.svg 'Continuous Integration and Deployment Non-Live Production Environment')
 ![CICD Production Enviroment Update](CICD-Production-Enviroment-Update.svg 'Blue / Green Deployment Production Environment')
