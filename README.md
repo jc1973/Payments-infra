@@ -40,8 +40,8 @@
 ## CI / CD
 
 
-![CICD-Dev-Container-SVC.svg]
-![CICD-Dev-Infrastructure.svg]
-![CICD-Staging-Environment.svg]
-![CICD-Non-Live-Prodution-Environment.svg]
-![CICD-Production-Enviroment-Update.svg]
+![CI Service Container](CICD-Dev-Container-SVC.svg 'Continous Integration - Service container Builds')
+![CICD Dev Enviroment](CICD-Dev-Infrastructure.svg 'Continuous Integration and Deployment Development Environment')
+![CICD Staging Environment](CICD-Staging-Environment.svg 'Continuous Integration and Deployment Staging Environment')
+![CICD Non-Live Prodution Environment](CICD-Non-Live-Prodution-Environment.svg 'Continuous Integration and Deployment Non-Live Production Environment')
+![CICD Production Enviroment Update](CICD-Production-Enviroment-Update.svg 'Blue / Green Deployment Production Environment')
