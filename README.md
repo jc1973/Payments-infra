@@ -41,6 +41,9 @@
 
 ## CI / CD
 
+**Terraform is to be used for all infrastructure**
+  
+  
 ### Development
   
 ![CI Service Container](CICD-Dev-Container-SVC.svg 'Continous Integration - Service container Builds')
